@@ -13,3 +13,9 @@ class Component:
             if title.strip() and description.strip():
                 return True
         return False
+
+    def get_title(self) -> str:
+        return self.__title
+
+    def get_description(self) -> str:
+        return self.__description
