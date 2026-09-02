@@ -2,7 +2,8 @@ from component import Component
 
 
 class ComputerAssembly:
-    def __init__(self):
+    def __init__(self, assembly_title: str):
+        self.__assembly_title = assembly_title
         self.__component = []
 
     def add_component(self, component: Component):
@@ -13,6 +14,7 @@ class ComputerAssembly:
             return
 
     def show_assembly(self):
+        print(f'Сборка: {self.__assembly_title}')
         if not self.__component:
             print('Компоненты отсутствуют')
         else:
