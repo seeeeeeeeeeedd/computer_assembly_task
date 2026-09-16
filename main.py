@@ -1,4 +1,3 @@
-from component import Component
 from service import Service
 from computer_assembly import ComputerAssembly
 
@@ -40,11 +39,13 @@ while is_program_running:
             else:
                 print()
                 print('Сборки с таким названием не существует')
+
         elif user_command_number == SHOW_ALL_ASSEMBLIES_COMMAND:
             service.show_all_computer_assemblies()
         elif user_command_number == SHOW_ASSEMBLY_COMPONENTS_COMMAND:
             user_assembly_title = input('Укажите название сборки: ').strip().capitalize()
             assembly = service.find_computer_assembly_by_title(user_assembly_title)
+
             if assembly:
                 assembly.show_assembly()
             else:
