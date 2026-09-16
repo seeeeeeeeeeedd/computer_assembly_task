@@ -6,6 +6,9 @@ class ComputerAssembly:
         self.__assembly_title = assembly_title
         self.__component = []
 
+    def get_computer_assembly_title(self) -> str:
+        return self.__assembly_title
+
     def add_component(self, title: str, description: str):
         component = Component(title, description)
         self.__component.append(component)
