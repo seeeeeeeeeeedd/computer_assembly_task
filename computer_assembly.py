@@ -3,7 +3,7 @@ from component import Component
 
 class ComputerAssembly:
     def __init__(self, assembly_title: str):
-        self.__assembly_title = assembly_title
+        self.__assembly_title = assembly_title.capitalize()
         self.__component = []
 
     def get_computer_assembly_title(self) -> str:
