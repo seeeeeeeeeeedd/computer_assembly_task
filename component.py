@@ -1,6 +1,6 @@
 class Component:
     def __init__(self, title: str, description: str):
-        is_valid = self.__is_valid_component
+        is_valid = self.__is_valid_component(title, description)
 
         if is_valid:
             self.__title = title
