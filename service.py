@@ -23,3 +23,11 @@ class Service:
     def show_all_computer_assemblies(self):
         for computer_assembly in self.__computer_assemblies:
             computer_assembly.show_assembly()
+
+    def find_computer_assembly_by_title(self, title: str):
+        for computer_assembly in self.__computer_assemblies:
+
+            if computer_assembly.get_computer_assembly_title().lower() == title.lower():
+                return computer_assembly
+
+        return None
