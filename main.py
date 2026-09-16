@@ -26,16 +26,16 @@ while is_program_running:
 
     if user_command_number in commands:
         if user_command_number == CREATE_ASSEMBLY_COMMAND:
-            user_assembly_title = input('Укажите название сборки: ').strip().title()
+            user_assembly_title = input('Укажите название сборки: ').strip().capitalize()
             new_assembly = ComputerAssembly(user_assembly_title)
             service.add_computer_assembly(new_assembly)
         elif user_command_number == ADD_COMPONENT_COMMAND:
-            user_assembly_title = input('Укажите название сборки для добавления компонента: ').strip().title()
+            user_assembly_title = input('Укажите название сборки для добавления компонента: ').strip().capitalize()
             assembly = service.find_computer_assembly_by_title(user_assembly_title)
 
             if assembly:
-                user_component_title = input('Укажите название компонента: ').strip().title()
-                user_component_description = input('Укажите характеристики компонента: ').strip().title()
+                user_component_title = input('Укажите название компонента: ').strip()
+                user_component_description = input('Укажите характеристики компонента: ').strip()
                 assembly.add_component(user_component_title, user_component_description)
             else:
                 print()
@@ -43,7 +43,7 @@ while is_program_running:
         elif user_command_number == SHOW_ALL_ASSEMBLIES_COMMAND:
             service.show_all_computer_assemblies()
         elif user_command_number == SHOW_ASSEMBLY_COMPONENTS_COMMAND:
-            user_assembly_title = input('Укажите название сборки: ').strip().title()
+            user_assembly_title = input('Укажите название сборки: ').strip().capitalize()
             assembly = service.find_computer_assembly_by_title(user_assembly_title)
             if assembly:
                 assembly.show_assembly()
