@@ -14,7 +14,7 @@ class Service:
         else:
             print('Ошибка. Некорректные данные')
 
-    def get_computer_assembly_title(self) -> str:
+    def get_service_title(self) -> str:
         return self.__title
 
     def __is_valid_computer_assembly(self, computer_assembly: ComputerAssembly) -> bool:
