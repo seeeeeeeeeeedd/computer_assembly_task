@@ -47,7 +47,7 @@ while is_program_running:
             assembly = service.find_computer_assembly_by_title(user_assembly_title)
 
             if assembly:
-                assembly.show_assembly()
+                assembly.show()
             else:
                 print()
                 print('Сборки с таким названием не существует')
