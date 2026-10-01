@@ -12,7 +12,6 @@ class ComputerAssembly:
         else:
             self.__title = 'Без названия'
 
-
     def get_computer_assembly_title(self) -> str:
         return self.__title
 
@@ -22,6 +21,7 @@ class ComputerAssembly:
 
     def show(self):
         print(f'Сборка: {self.__title}')
+
         if not self.__components:
             print('Компоненты отсутствуют')
         else:
@@ -29,6 +29,7 @@ class ComputerAssembly:
                 print(f'Компонент: "{component.get_title()}", характеристика: {component.get_description()}')
 
     def __is_valid_title(self, title: str) -> bool:
+
         if not isinstance(title, str):
             return False
         if not title.strip():
