@@ -29,5 +29,15 @@ class Service:
 
         return None
 
+    def add_component_to_computer_assembly(self, assembly_title: str,
+                                           component_title: str, component_description: str) -> bool:
+        assembly = self.find_computer_assembly_by_title(assembly_title)
+        if assembly is None:
+            print('Ошибка. Сборки с таким названием не найдено')
+            return False
+        else:
+            assembly.add_component(component_title, component_description)
+            return True
+
     def __is_valid_computer_assembly(self, computer_assembly: ComputerAssembly) -> bool:
         return isinstance(computer_assembly, ComputerAssembly)
