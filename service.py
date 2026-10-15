@@ -23,7 +23,6 @@ class Service:
 
     def find_computer_assembly_by_title(self, title: str):
         for computer_assembly in self.__computer_assemblies:
-
             if computer_assembly.get_computer_assembly_title().lower() == title.lower():
                 return computer_assembly
 
@@ -32,6 +31,7 @@ class Service:
     def add_component_to_computer_assembly(self, assembly_title: str,
                                            component_title: str, component_description: str) -> bool:
         assembly = self.find_computer_assembly_by_title(assembly_title)
+
         if assembly is None:
             print('Ошибка. Сборки с таким названием не найдено')
             return False
