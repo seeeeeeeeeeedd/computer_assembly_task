@@ -29,7 +29,6 @@ class ComputerAssembly:
                 print(f'Компонент: "{component.get_title()}", характеристика: {component.get_description()}')
 
     def __is_valid_title(self, title: str) -> bool:
-
         if not isinstance(title, str):
             return False
         if not title.strip():
